@@ -1,13 +1,13 @@
 apply plugin: 'com.android.library'
 apply plugin: 'bintray-release'
+apply plugin: 'com.novoda.bintray-release'
 
 android {
-    compileSdkVersion 22
-    buildToolsVersion '22.0.1'
+    compileSdkVersion 29
 
     defaultConfig {
-        minSdkVersion 14
-        targetSdkVersion 22
+        minSdkVersion 26
+        targetSdkVersion 29
         versionCode 1
         versionName "1.1.0"
     }
@@ -20,7 +20,7 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:support-v4:22.1.1'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
 }
 
 buildscript {
@@ -29,7 +29,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.novoda:bintray-release:0.3.4'
+        classpath 'com.novoda:bintray-release:0.6.1'
     }
 }
 
